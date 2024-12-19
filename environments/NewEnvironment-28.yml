@@ -1,0 +1,11 @@
+fileVersion: 1
+id: "28"
+mappingDefinitions:
+  DESTINATION:
+    database: ROB_EDW
+    schema: 7_11_Regression_ENV
+  SOURCE:
+    database: COALESCE_SAMPLE_DATABASE
+    schema: TPCH_SF001
+name: New Environment
+type: Environment

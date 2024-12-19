@@ -10,7 +10,10 @@ operation:
     truncateBefore: true
   database: ""
   deployEnabled: true
-  description: ""
+  description: |-
+    1. This node extracts data from the 'NATION' source table,  which contains nation-level information. It serves as an intermediary step in the data pipeline, enabling the integration of nation data with other datasets.
+    2. Downstream applications could include joining this data with sales or customer records to understand regional trends, analyzing customer demographics based on nationality, and generating reports on sales performance by nation.
+    3. The node directly retrieves columns from the 'NATION' source table: N_NATIONKEY (nation identifier), N_NAME (nation name), N_REGIONKEY (region identifier), and N_COMMENT (optional description). No transformations are applied to the data in this step.
   isMultisource: false
   locationName: DESTINATION
   materializationType: table

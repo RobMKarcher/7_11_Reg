@@ -1,0 +1,127 @@
+fileVersion: 1
+id: 7001572f-d30b-4123-8774-9cf5ed8082c6
+name: STG_NATION4
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: |-
+    1. This node combines and enriches nation-related data from the STG_NATION stage table to create a consolidated nation table. 
+    2. It serves as a foundational element for downstream analysis and reporting, providing comprehensive information on nations. 
+    3. The node aggregates data from the STG_NATION stage table, drawing from columns such as N_NATIONKEY, N_NAME, N_REGIONKEY, and N_COMMENT. No transformations are applied, the node simply combines the data into a single table. 
+    4. Key columns include N_NATIONKEY as a primary key for identification, N_NAME for descriptive purposes, N_REGIONKEY to establish relationships with regions, and N_COMMENT for detailed insights.
+  isMultisource: false
+  locationName: DESTINATION
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9bf3f66f-a46a-4cae-aec2-40364565f99c
+          stepCounter: 7001572f-d30b-4123-8774-9cf5ed8082c6
+        config: {}
+        dataType: VARCHAR(4)
+        description: ""
+        name: ALEX_END
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 078185ec-633a-4b6d-8763-2caf219b94b9
+                stepCounter: 53b85903-bf75-49e7-b06c-ee0cd447f043
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0b8bf65f-27de-44c9-b636-f00fca2c8f06
+          stepCounter: 7001572f-d30b-4123-8774-9cf5ed8082c6
+        config: {}
+        dataType: VARCHAR(4)
+        description: ""
+        name: GREG_END
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6c0aabf5-1b34-4b67-ab6c-5f7c9d7a75fd
+                stepCounter: 53b85903-bf75-49e7-b06c-ee0cd447f043
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e420888e-b422-4f1c-9d88-abc58952f247
+          stepCounter: 7001572f-d30b-4123-8774-9cf5ed8082c6
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: N_NATIONKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bae72cf1-26d4-4625-9ac3-bcdf931db8aa
+                stepCounter: 53b85903-bf75-49e7-b06c-ee0cd447f043
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 64c19058-b851-43b7-be04-968a0890a8b0
+          stepCounter: 7001572f-d30b-4123-8774-9cf5ed8082c6
+        config: {}
+        dataType: VARCHAR(25)
+        description: ""
+        name: N_NAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: db4a8cd5-f9c4-4928-8d71-44db799b3068
+                stepCounter: 53b85903-bf75-49e7-b06c-ee0cd447f043
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fecfb7b1-4649-4f87-b0da-9d30bed535d7
+          stepCounter: 7001572f-d30b-4123-8774-9cf5ed8082c6
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: N_REGIONKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9682063e-87ab-41f2-aaf8-fcabfeace793
+                stepCounter: 53b85903-bf75-49e7-b06c-ee0cd447f043
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 58ccf48b-fdd1-4618-8ae7-1093eacb1a96
+          stepCounter: 7001572f-d30b-4123-8774-9cf5ed8082c6
+        config: {}
+        dataType: VARCHAR(152)
+        description: ""
+        name: N_COMMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a23c2b87-0b66-49dc-94aa-55c667ae1ad0
+                stepCounter: 53b85903-bf75-49e7-b06c-ee0cd447f043
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DESTINATION
+            nodeName: STG_NATION3
+        join:
+          joinCondition: FROM {{ ref('DESTINATION', 'STG_NATION3') }} "STG_NATION3"
+        name: STG_NATION4
+        noLinkRefs: []
+  name: STG_NATION4
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

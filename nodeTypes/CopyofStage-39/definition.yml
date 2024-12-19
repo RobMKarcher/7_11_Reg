@@ -16,7 +16,7 @@ metadata:
       - type: materializationSelector
         default: table
         options:
-        - tab
+        - table
         - view
         isRequired: true
 

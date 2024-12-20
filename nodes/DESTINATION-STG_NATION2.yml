@@ -105,6 +105,26 @@ operation:
               - columnCounter: f2718614-e89c-4f4a-85f7-c8e9f9518e9e
                 stepCounter: ea7c4a53-c454-41ed-a2af-062ada505f03
             transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 604b716d-17a8-4d2e-b7ad-154faf2a9d96
+          stepCounter: ad4afc4a-b78c-45b9-8169-4d2f3b18b52c
+        config: {}
+        dataType: ""
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: N_BUBBLES
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: ""
+        systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:

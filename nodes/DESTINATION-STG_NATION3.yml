@@ -105,6 +105,23 @@ operation:
               - columnCounter: 70bee1d3-f8c2-403c-ba5e-b5112af1271e
                 stepCounter: ad4afc4a-b78c-45b9-8169-4d2f3b18b52c
             transform: ""
+      - acceptedValues:
+          strictMatch: false
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2fa9f16d-9310-4b14-b2a6-4cc8dda3c5cf
+          stepCounter: 53b85903-bf75-49e7-b06c-ee0cd447f043
+        config: {}
+        dataType: ""
+        description: ""
+        name: N_BUBBLES
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 604b716d-17a8-4d2e-b7ad-154faf2a9d96
+                stepCounter: ad4afc4a-b78c-45b9-8169-4d2f3b18b52c
+            transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:

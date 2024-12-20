@@ -47,7 +47,7 @@ operation:
           - columnReferences:
               - columnCounter: 960100cf-ba17-41db-abfa-975c15725bc6
                 stepCounter: 2259e066-cb4b-48df-bb4d-19353a1be40f
-            transform: ""
+            transform: "\"NATION\".\"N_NAME\""
       - appliedColumnTests: {}
         columnReference:
           columnCounter: dcccc79c-ce87-40b5-9259-d289cfd260d9

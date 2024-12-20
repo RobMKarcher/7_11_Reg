@@ -1,0 +1,14 @@
+fileVersion: 1
+id: "43"
+isDisabled: false
+metadata:
+  defaultStorageLocation: null
+  error: null
+  nodeMetadataSpec: |-
+    capitalized: AdvDeploy Test
+    short: ADT
+    tagColor: gray
+    deployStrategy: advanced
+    plural: New Types
+name: AdDeploy Test
+type: NodeType
